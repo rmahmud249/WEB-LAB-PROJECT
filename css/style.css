@@ -1,0 +1,186 @@
+/* =====Css Common code========*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+    outline: 0px;
+    font-family: "Roboto", sans-serif;
+}
+h1,h2,p,span{
+    margin: 0px;
+    padding: 0px;
+}
+ul,ol{
+    list-style-type:none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    vertical-align: middle;
+}
+/* ====Css common code end==========*/
+/*==========Header part start====== */
+#header-container{
+    width: 100%;
+    padding: 10px 20px;
+    background-color:#011F7F;
+}
+.header-top-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #062B91;
+}
+.logo a img{
+    width:250px;
+}
+.search-box {
+    width:450px;
+    height:45px;
+    display: flex;
+    margin: 0px auto;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 14px;
+    font-size: 14px;
+}
+.category {
+    height: 100%;
+    width: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-left: 1px solid #ddd;
+    font-size: 14px;
+    background: #ffffff;
+}
+.category i {
+    font-size: 18px;
+}
+.search-btn {
+    width: 60px;
+    height: 100%;
+    border: none;
+    background: #ffc800;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-btn i {
+    font-size: 24px;
+    color: #001a66;
+}
+.right-contnet{
+    display: flex;
+    align-items: center;
+}
+.right-contnet .r-item{
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+}
+.right-contnet .r-item .r-icon{
+   color:#fff;
+   font-size: 30px;
+   padding-right: 10px;
+   font-weight: 400;
+}
+.right-contnet .r-item .r-content p ,a{
+    color: #fff;
+    font-weight: 400;
+   
+}
+/*==========Header part end===========*/
+/*==========Menu Item part start===========*/
+ .navbar {
+    height: 50px;
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+    color: #ffffff;
+}
+.categories {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 220px;
+    font-size:20px;
+    font-weight: 600;
+}
+.categories i {
+    font-size: 22px;
+}
+.nav-links{
+    margin: 0px auto;
+}
+.nav-links ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+}
+.nav-links li {
+    height: 100%;
+}
+.nav-links a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav-links a.active {
+    color: #FFC800;
+}
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -19px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #FFC800;
+}
+.nav-links a:hover {
+    color: #FFC800;
+}
+.nav-links a:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -19px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #FFC800;
+}
+.support {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 18px;
+    white-space: nowrap;
+    }
+.support i {
+    font-size: 19px;
+}
+/*==========Menu Item part End===========*/
