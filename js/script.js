@@ -1,343 +1,125 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-    const slider = document.querySelector(".banner-slider");
-
-    const slides = document.querySelectorAll(".banner-slide");
-
-    const dots = document.querySelectorAll(".banner-dot");
-
-    const prevButton = document.querySelector(".banner-prev");
-
-    const nextButton = document.querySelector(".banner-next");
-
-
-    let currentSlide = 0;
-
-    let autoPlay;
-
-    const slideCount = slides.length;
-
-    const autoPlayTime = 5000;
-
-
-    /* =========================================
-       SHOW SLIDE
-    ========================================= */
-
-    function showSlide(index) {
-
-        /* Handle next */
-
-        if (index >= slideCount) {
-            index = 0;
-        }
-
-
-        /* Handle previous */
-
-        if (index < 0) {
-            index = slideCount - 1;
-        }
-
-
-        currentSlide = index;
-
-
-        /* -----------------------------------------
-           Update slides
-        ----------------------------------------- */
-
-        slides.forEach(function (slide, i) {
-
-            slide.classList.remove("active");
-            slide.classList.remove("prev");
-
-
-            /*
-             * Slides before current slide
-             * move to the left.
-             */
-
-            if (i < currentSlide) {
-
-                slide.classList.add("prev");
-
-            }
-
-            /*
-             * Current slide stays in center.
-             */
-
-            else if (i === currentSlide) {
-
-                slide.classList.add("active");
-
-            }
-
-            /*
-             * Slides after current slide
-             * stay on the right.
-             */
-
-            else {
-
-                slide.style.transform = "translateX(100%)";
-
-            }
-
-        });
-
-
-        /* -----------------------------------------
-           Update dots
-        ----------------------------------------- */
-
-        dots.forEach(function (dot, i) {
-
-            dot.classList.toggle(
-                "active",
-                i === currentSlide
-            );
-
-        });
-
+//==========Banner sliding code Stat===============//
+const slides = document.querySelectorAll(".banner-slide");
+const dots = document.querySelectorAll(".dot");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const slider = document.querySelector(".banner-slider");
+let currentSlide = 0;
+let autoSlide;
+function nextSlide() {
+    const current = slides[currentSlide];
+    let nextIndex = currentSlide + 1;
+    if (nextIndex >= slides.length) {
+        nextIndex = 0;
     }
-
-
-    /* =========================================
-       NEXT SLIDE
-    ========================================= */
-
-    function nextSlide() {
-
-        showSlide(currentSlide + 1);
-
-    }
-
-
-    /* =========================================
-       PREVIOUS SLIDE
-    ========================================= */
-
-    function previousSlide() {
-
-        showSlide(currentSlide - 1);
-
-    }
-
-
-    /* =========================================
-       NEXT BUTTON
-    ========================================= */
-
-    nextButton.addEventListener("click", function () {
-
-        nextSlide();
-
-        restartAutoPlay();
-
+    const next = slides[nextIndex];
+    next.style.transition = "none";
+    next.style.transform = "translateX(100%)";
+    next.style.zIndex = "2";
+    next.classList.add("active");
+    next.offsetHeight;
+    current.style.transition = "transform 0.6s ease-in-out";
+    next.style.transition = "transform 0.6s ease-in-out";
+    current.style.transform = "translateX(-100%)";
+    next.style.transform = "translateX(0)";
+    dots.forEach(function(dot) {
+        dot.classList.remove("active");
     });
-
-
-    /* =========================================
-       PREVIOUS BUTTON
-    ========================================= */
-
-    prevButton.addEventListener("click", function () {
-
-        previousSlide();
-
-        restartAutoPlay();
-
-    });
-
-
-    /* =========================================
-       DOT CLICK
-    ========================================= */
-
-    dots.forEach(function (dot, index) {
-
-        dot.addEventListener("click", function () {
-
-            showSlide(index);
-
-            restartAutoPlay();
-
-        });
-
-    });
-
-
-    /* =========================================
-       AUTOPLAY
-    ========================================= */
-
-    function startAutoPlay() {
-
-        autoPlay = setInterval(function () {
-
-            nextSlide();
-
-        }, autoPlayTime);
-
+    dots[nextIndex].classList.add("active");
+    setTimeout(function() {
+        current.style.transition = "none";
+        current.style.transform = "translateX(100%)";
+        current.style.zIndex = "1";
+        next.style.zIndex = "2";
+    }, 400);
+    currentSlide = nextIndex;
+}
+function previousSlide() {
+    const current = slides[currentSlide];
+    let previousIndex = currentSlide - 1;
+    if (previousIndex < 0) {
+        previousIndex = slides.length - 1;
     }
-
-
-    /* =========================================
-       STOP AUTOPLAY
-    ========================================= */
-
-    function stopAutoPlay() {
-
-        clearInterval(autoPlay);
-
-    }
-
-
-    /* =========================================
-       RESTART AUTOPLAY
-    ========================================= */
-
-    function restartAutoPlay() {
-
-        stopAutoPlay();
-
-        startAutoPlay();
-
-    }
-
-
-    /* =========================================
-       PAUSE ON HOVER
-    ========================================= */
-
-    slider.addEventListener("mouseenter", function () {
-
-        stopAutoPlay();
-
+    const previous = slides[previousIndex];
+    previous.style.transition = "none";
+    previous.style.transform = "translateX(-100%)";
+    previous.style.zIndex = "2";
+    previous.classList.add("active");
+    previous.offsetHeight;
+    current.style.transition = "transform 0.6s ease-in-out";
+    previous.style.transition = "transform 0.6s ease-in-out";
+    current.style.transform = "translateX(100%)";
+    previous.style.transform = "translateX(0)";
+    dots.forEach(function(dot) {
+        dot.classList.remove("active");
     });
-
-
-    slider.addEventListener("mouseleave", function () {
-
-        startAutoPlay();
-
-    });
-
-
-    /* =========================================
-       KEYBOARD
-    ========================================= */
-
-    document.addEventListener("keydown", function (event) {
-
-        if (event.key === "ArrowRight") {
-
-            nextSlide();
-
-            restartAutoPlay();
-
-        }
-
-
-        if (event.key === "ArrowLeft") {
-
-            previousSlide();
-
-            restartAutoPlay();
-
-        }
-
-    });
-
-
-    /* =========================================
-       TOUCH SWIPE
-    ========================================= */
-
-    let touchStartX = 0;
-
-    let touchEndX = 0;
-
-
-    slider.addEventListener(
-        "touchstart",
-        function (event) {
-
-            touchStartX =
-                event.changedTouches[0].screenX;
-
-            stopAutoPlay();
-
-        },
-        {
-            passive: true
-        }
-    );
-
-
-    slider.addEventListener(
-        "touchend",
-        function (event) {
-
-            touchEndX =
-                event.changedTouches[0].screenX;
-
-            handleSwipe();
-
-            startAutoPlay();
-
-        },
-        {
-            passive: true
-        }
-    );
-
-
-    /* =========================================
-       SWIPE FUNCTION
-    ========================================= */
-
-    function handleSwipe() {
-
-        const distance =
-            touchEndX - touchStartX;
-
-
-        if (Math.abs(distance) < 50) {
-
-            return;
-
-        }
-
-
-        /* Swipe left = next */
-
-        if (distance < 0) {
-
-            nextSlide();
-
-        }
-
-
-        /* Swipe right = previous */
-
-        else {
-
-            previousSlide();
-
-        }
-
-    }
-
-
-    /* =========================================
-       INITIALIZE
-    ========================================= */
-
-    showSlide(0);
-
-    startAutoPlay();
-
+    dots[previousIndex].classList.add("active");
+    setTimeout(function() {
+        current.style.transition = "none";
+        current.style.transform = "translateX(-100%)";
+        current.style.zIndex = "1";
+        previous.style.zIndex = "2";
+    }, 600);
+    currentSlide = previousIndex;
+}
+nextBtn.addEventListener("click", function() {
+    nextSlide();
+    restartAutoSlide();
 });
+prevBtn.addEventListener("click", function() {
+    previousSlide();
+    restartAutoSlide();
+});
+dots.forEach(function(dot) {
+    dot.addEventListener("click", function() {
+        const index = Number(
+            this.getAttribute("data-slide")
+        );
+        if (index === currentSlide) {
+            return;
+        }
+        slides.forEach(function(slide) {
+            slide.style.transition = "none";
+            slide.style.transform = "translateX(100%)";
+        });
+        slides[index].style.transform = "translateX(0)";
+        slides[index].style.zIndex = "2";
+        dots.forEach(function(dot) {
+            dot.classList.remove("active");
+        });
+        dots[index].classList.add("active");
+        currentSlide = index;
+        restartAutoSlide();
+    });
+});
+function startAutoSlide() {
+    autoSlide = setInterval(function() {
+        nextSlide();
+    }, 4000);
+}
+function restartAutoSlide() {
+    clearInterval(autoSlide);
+    startAutoSlide();
+}
+slider.addEventListener("mouseenter", function() {
+    clearInterval(autoSlide);
+});
+slider.addEventListener("mouseleave", function() {
+
+    restartAutoSlide();
+});
+slides.forEach(function(slide, index) {
+    slide.style.position = "absolute";
+    slide.style.top = "0";
+    slide.style.left = "0";
+    if (index === 0) {
+        slide.style.transform = "translateX(0)";
+        slide.style.zIndex = "2";
+    } else {
+        slide.style.transform = "translateX(100%)";
+        slide.style.zIndex = "1";
+    }
+});
+dots[0].classList.add("active");
+startAutoSlide();
+//==========Banner sliding code end===============//

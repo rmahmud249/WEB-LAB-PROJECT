@@ -192,7 +192,7 @@ img{
 }
 /*==========Menu Item part End===========*/
 /*==========Hero seaction part start=====*/
-#hero-section {
+/* #banner-section{
     top: 0;
     left: 0;
     width: 100%;
@@ -290,6 +290,192 @@ img{
     padding-right: 10px;
     font-size: 30px;
     font-weight: 400;
+} */
+
+#banner-section {
+    width: 100%;
+    position: relative;
+}
+.banner-main {
+    width: 100%;
+}
+.banner-slider {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+}
+.banner-slide {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateX(100%);
+    transition: transform 0.6s ease-in-out;
+    z-index: 1;
+}
+.banner-slide.active {
+    transform: translateX(0);
+    z-index: 2;
+}
+.banner-content {
+    padding-top: 200px;
+    padding-left: 80px;
+    position: relative;
+    z-index: 3;
+}
+.banner-content h3 {
+    color: #FFC800;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.banner-content h1 {
+    color: #ffffff;
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 10px;
+}
+.banner-content h1 span {
+    color: #FFC800;
+}
+.banner-content  p {
+    color: #f5f5f5;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.banner-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    overflow: hidden;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 35px;
+    border-radius: 5px;
+    background-color: #FFC800;
+    text-decoration: none;
+    transition: 0.3s ease;
+    z-index: 1;
+}
+.banner-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: 0.4s ease;
+    z-index: -1;
+}
+.banner-btn:hover::before {
+    left: 0;
+}
+.banner-btn:hover {
+    color: #000000;
+}
+.banner-btn i {
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+.banner-btn:hover i {
+    transform: translateX(5px);
+}
+.banner-features {
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+}
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 20px;
+}
+.f-icon {
+    color: #ffc800;
+    padding-top: 1px;
+    padding-right: 10px;
+    font-size: 30px;
+}
+.f-item-content strong {
+    display: block;
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+.f-item-content p {
+    color: #f5f5f5;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+.slider-btn {
+    top: 50%; 
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    color: #ffffff;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.35);
+}
+.slider-btn:hover {
+    background-color: #FFC800;
+    color: #000000;
+    transform: translateY(-50%) scale(1.08);
+}
+.prev-btn {
+    left: 20px;
+}
+.next-btn {
+    right: 20px;
+}
+.slider-dots {
+    left: 50%;
+    bottom: 80px;
+    gap: 8px;
+    z-index: 10;
+    position: absolute;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+   
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.dot:hover {
+    background-color: #FFC800;
+}
+.dot.active {
+    width: 30px;
+    border-radius: 10px;
+    background-color: #FFC800;
 }
 /*==========Hero seaction part End=======*/
 #banner-offer{
