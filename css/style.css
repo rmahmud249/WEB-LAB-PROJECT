@@ -207,7 +207,7 @@ img{
 }
 .banner-content{
     padding-top: 200px;
-    padding-bottom:150px;
+    padding-bottom:100px;
     padding-left: 80px;
 }
 .banner-content h3{
@@ -292,3 +292,49 @@ img{
     font-weight: 400;
 }
 /*==========Hero seaction part End=======*/
+#banner-offer{
+    padding: 40px 30px;
+}
+.offer-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.offer-items {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+}
+.offer-content{
+    padding-top: 40px;
+}
+.offer-content h3 {
+    color: #071d63;
+    font-size:22px;
+    margin-bottom: 7px;
+}
+
+.offer-content h4 {
+    color: #062b91;
+    font-size: 22px;
+    margin-bottom:10px;
+}
+
+.offer-content a {
+    color: #062b91;
+    font-size: 16px;
+    font-weight: 600;
+}
+.offer-content a:hover {
+    color:#000;
+}
+.offer-content a span {
+    margin-left: 5px;
+    font-size: 16px;
+}
+
