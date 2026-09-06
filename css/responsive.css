@@ -1,0 +1,1343 @@
+/* =====================================================
+   NEXORA BD - RESPONSIVE CSS
+   Mobile-First Responsive Design
+   ===================================================== */
+
+/* ===================== EXTRA SMALL DEVICES (< 480px) ========================= */
+@media screen and (max-width: 479px) {
+    
+    /* ========== HEADER RESPONSIVE ========== */
+    #header-container {
+        padding: 8px 0px;
+    }
+    
+    .header-top-content {
+        flex-direction: column;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 8px;
+        gap: 10px;
+    }
+    
+    .logo a img {
+        width: 150px;
+    }
+    
+    .search-box {
+        width: 100%;
+        height: 40px;
+        margin: 0;
+    }
+    
+    .search-input {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+    
+    .category {
+        width: 100px;
+        font-size: 12px;
+    }
+    
+    .category i {
+        font-size: 16px;
+    }
+    
+    .search-btn {
+        width: 50px;
+    }
+    
+    .search-btn i {
+        font-size: 20px;
+    }
+    
+    .right-contnet {
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    .right-contnet .r-item {
+        margin-right: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+    }
+    
+    .right-contnet .r-item .r-icon {
+        font-size: 24px;
+        padding-right: 0;
+    }
+    
+    .right-contnet .r-item .r-content {
+        display: none;
+    }
+    
+    /* ========== NAVBAR RESPONSIVE ========== */
+    .navbar {
+        flex-wrap: wrap;
+        padding-left: 12px;
+        padding-right: 12px;
+        height: auto;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    
+    .categories {
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .categories i {
+        font-size: 20px;
+    }
+    
+    .nav-links {
+        display: none;
+        width: 100%;
+        margin: 0;
+    }
+    
+    .nav-links.active {
+        display: block;
+    }
+    
+    .nav-links ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .nav-links li {
+        width: 100%;
+    }
+    
+    .nav-links a {
+        padding: 10px 0;
+        border-bottom: 1px solid #062B91;
+    }
+    
+    .nav-links a.active::after {
+        display: none;
+    }
+    
+    .support {
+        display: none;
+    }
+    
+    /* ========== BANNER RESPONSIVE ========== */
+    .banner-slider {
+        height: 350px;
+    }
+    
+    .banner-content {
+        padding-top: 50px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .banner-content h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    
+    .banner-content h1 {
+        font-size: 28px;
+        line-height: 1.1;
+        margin-bottom: 8px;
+    }
+    
+    .banner-content p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    
+    .banner-btn {
+        font-size: 14px;
+        padding: 12px 25px;
+    }
+    
+    .banner-features {
+        flex-direction: column;
+        margin-top: 15px;
+        gap: 8px;
+    }
+    
+    .feature-item {
+        margin-right: 0;
+    }
+    
+    .f-icon {
+        font-size: 22px;
+        padding-right: 8px;
+    }
+    
+    .f-item-content strong {
+        font-size: 14px;
+    }
+    
+    .f-item-content p {
+        font-size: 12px;
+    }
+    
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+    
+    .prev-btn {
+        left: 5px;
+    }
+    
+    .next-btn {
+        right: 5px;
+    }
+    
+    .slider-dots {
+        bottom: 20px;
+        gap: 6px;
+    }
+    
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .dot.active {
+        width: 25px;
+    }
+    
+    /* ========== BANNER OFFER SECTION ========== */
+    #banner-offer {
+        padding: 20px 12px;
+    }
+    
+    .offer-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .offer-items {
+        height: 180px;
+    }
+    
+    .offer-content {
+        padding-top: 20px;
+    }
+    
+    .offer-content h3 {
+        font-size: 18px;
+    }
+    
+    .offer-content h4 {
+        font-size: 18px;
+    }
+    
+    .offer-content a {
+        font-size: 14px;
+    }
+    
+    /* ========== CATEGORIES SECTION ========== */
+    .categories-section {
+        padding-bottom: 20px;
+    }
+    
+    .categories-wrapper {
+        padding: 0 12px;
+        gap: 10px;
+        flex-direction: column;
+    }
+    
+    .categories-list {
+        height: auto;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 10px;
+    }
+    
+    .category-item {
+        border-right: none;
+        border-bottom: 1px solid #eeeeee;
+        padding: 8px 0;
+    }
+    
+    .category-item:last-child {
+        border-bottom: none;
+    }
+    
+    .category-image {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .category-image img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .category-item span {
+        font-size: 12px;
+    }
+    
+    .mega-deals {
+        width: 100%;
+        height: auto;
+        padding: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .mega-content h3 {
+        font-size: 16px;
+    }
+    
+    .mega-content p {
+        font-size: 11px;
+    }
+    
+    .mega-image {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    
+    .mega-image img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    /* ========== BEST DEALS SECTION ========== */
+    .best-deals {
+        padding: 10px 12px;
+    }
+    
+    .best-deals .deals-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .best-deals .deals-title {
+        font-size: 22px;
+    }
+    
+    .best-deals .deals-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .best-deals .deal-card {
+        padding: 8px;
+    }
+    
+    .best-deals .product-image {
+        height: 100px;
+    }
+    
+    .best-deals .product-name {
+        font-size: 12px;
+    }
+    
+    .best-deals .price {
+        font-size: 13px;
+    }
+    
+    .best-deals .add-cart {
+        height: 26px;
+        font-size: 12px;
+    }
+    
+    /* ========== BEST SELLERS SECTION ========== */
+    .best-sellers {
+        padding: 20px 12px;
+    }
+    
+    .best-sellers .sellers-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .best-sellers .seller-card {
+        padding: 8px;
+    }
+    
+    .best-sellers .seller-image {
+        height: 100px;
+    }
+    
+    .best-sellers .seller-name {
+        font-size: 12px;
+    }
+    
+    /* ========== MEGA OFFER BANNER ========== */
+    .mega-offer-banner {
+        height: 180px;
+        margin-bottom: 15px;
+    }
+    
+    .mega-offer-content {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .mega-offer-label {
+        font-size: 16px;
+    }
+    
+    .mega-offer-content h1 {
+        font-size: 32px;
+        line-height: 1;
+    }
+    
+    .mega-offer-content p {
+        font-size: 14px;
+    }
+    
+    .mega-offer-btn {
+        margin-top: 8px;
+        padding: 10px 18px;
+        font-size: 13px;
+    }
+    
+    /* ========== SERVICE NEWSLETTER SECTION ========== */
+    .service-newsletter {
+        padding: 10px 12px;
+    }
+    
+    .service-newsletter .service-features {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 12px 0;
+    }
+    
+    .service-newsletter .service-item {
+        padding: 8px 12px;
+        border-right: none;
+        border-bottom: 1px solid #e0dfdf;
+    }
+    
+    .service-newsletter .service-item:nth-child(odd) {
+        border-right: 1px solid #e0dfdf;
+    }
+    
+    .service-newsletter .service-item:last-child {
+        border-bottom: none;
+    }
+    
+    .service-newsletter .service-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 22px;
+        margin-right: 8px;
+    }
+    
+    .service-newsletter .service-title {
+        font-size: 14px;
+    }
+    
+    .service-newsletter .service-text {
+        font-size: 12px;
+        white-space: normal;
+    }
+    
+    .service-newsletter .newsletter {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+        margin-top: 20px;
+        gap: 12px;
+    }
+    
+    .service-newsletter .newsletter-form {
+        width: 100%;
+        flex-shrink: 1;
+    }
+    
+    .service-newsletter .newsletter-icon {
+        display: none;
+    }
+    
+    .service-newsletter .newsletter-title {
+        font-size: 18px;
+    }
+    
+    .service-newsletter .newsletter-text {
+        font-size: 13px;
+    }
+    
+    /* ========== FOOTER SECTION ========== */
+    .nexora-footer .footer-content {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 20px;
+        padding: 20px 15px;
+    }
+    
+    .nexora-footer .footer-logo-text img {
+        width: 150px;
+    }
+    
+    .nexora-footer .footer-description {
+        width: 100%;
+        font-size: 13px;
+    }
+    
+    .nexora-footer .footer-column h3 {
+        font-size: 20px;
+        margin: 0 0 10px;
+    }
+    
+    .nexora-footer .footer-links a {
+        font-size: 14px;
+    }
+    
+    .nexora-footer .contact-item {
+        font-size: 14px;
+    }
+    
+    .nexora-footer .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        text-align: center;
+    }
+    
+    .nexora-footer .copyright {
+        font-size: 13px;
+    }
+    
+    .nexora-footer .payment-methods {
+        gap: 6px;
+    }
+}
+
+/* ==================== SMALL DEVICES (480px - 768px) ===================== */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    
+    /* ========== HEADER RESPONSIVE ========== */
+    #header-container {
+        padding: 8px 0px;
+    }
+    
+    .header-top-content {
+        flex-wrap: wrap;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 12px;
+    }
+    
+    .logo a img {
+        width: 180px;
+    }
+    
+    .search-box {
+        width: 100%;
+        height: 42px;
+        flex: 1;
+    }
+    
+    .category {
+        width: 110px;
+        font-size: 13px;
+    }
+    
+    .right-contnet {
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    .right-contnet .r-item {
+        flex-direction: row;
+    }
+    
+    .right-contnet .r-item .r-content {
+        display: block;
+    }
+    
+    .right-contnet .r-item .r-content p {
+        font-size: 12px;
+    }
+    
+    /* ========== NAVBAR RESPONSIVE ========== */
+    .navbar {
+        flex-wrap: wrap;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: auto;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    
+    .categories {
+        font-size: 16px;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .nav-links.active {
+        display: block;
+        width: 100%;
+    }
+    
+    .nav-links ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .nav-links a {
+        border-bottom: 1px solid #062B91;
+    }
+    
+    .support {
+        display: none;
+    }
+    
+    /* ========== BANNER RESPONSIVE ========== */
+    .banner-slider {
+        height: 400px;
+    }
+    
+    .banner-content {
+        padding-top: 70px;
+        padding-left: 30px;
+    }
+    
+    .banner-content h3 {
+        font-size: 16px;
+    }
+    
+    .banner-content h1 {
+        font-size: 38px;
+        line-height: 1.1;
+    }
+    
+    .banner-content p {
+        font-size: 16px;
+    }
+    
+    .banner-btn {
+        padding: 13px 30px;
+    }
+    
+    .banner-features {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .slider-dots {
+        bottom: 30px;
+    }
+    
+    /* ========== CATEGORIES SECTION ========== */
+    .categories-wrapper {
+        padding: 0 20px;
+        gap: 12px;
+    }
+    
+    .categories-list {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    .mega-deals {
+        min-width: 200px;
+    }
+    
+    /* ========== BEST DEALS SECTION ========== */
+    .best-deals {
+        padding: 10px 20px;
+    }
+    
+    .best-deals .deals-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+    
+    /* ========== BEST SELLERS SECTION ========== */
+    .best-sellers {
+        padding: 30px 20px;
+    }
+    
+    .best-sellers .sellers-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    
+    /* ========== SERVICE FEATURES ========== */
+    .service-newsletter .service-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .service-newsletter .newsletter {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 30px;
+        gap: 15px;
+    }
+    
+    .service-newsletter .newsletter-form {
+        width: 100%;
+    }
+    
+    /* ========== FOOTER ========== */
+    .nexora-footer .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+        row-gap: 25px;
+        padding: 25px 30px 20px;
+    }
+    
+    .nexora-footer .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px 30px;
+    }
+}
+
+/* ==================== MEDIUM DEVICES (768px - 1024px) ===================== */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+    /* ========== HEADER RESPONSIVE ========== */
+    #header-container {
+        padding: 10px 0px;
+    }
+    
+    .header-top-content {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    
+    .logo a img {
+        width: 200px;
+    }
+    
+    .search-box {
+        width: 350px;
+        height: 44px;
+    }
+    
+    .right-contnet .r-item .r-content p,
+    .right-contnet .r-item .r-content a {
+        font-size: 13px;
+    }
+    
+    /* ========== NAVBAR RESPONSIVE ========== */
+    .navbar {
+        padding-left: 25px;
+        padding-right: 25px;
+        height: 50px;
+    }
+    
+    .categories {
+        width: 180px;
+        font-size: 18px;
+        gap: 12px;
+    }
+    
+    .nav-links {
+        display: flex;
+    }
+    
+    .nav-links ul {
+        gap: 20px;
+    }
+    
+    .nav-links a {
+        font-size: 16px;
+    }
+    
+    .support {
+        display: flex;
+        font-size: 16px;
+    }
+    
+    /* ========== BANNER RESPONSIVE ========== */
+    .banner-slider {
+        height: 550px;
+    }
+    
+    .banner-content {
+        padding-top: 140px;
+        padding-left: 50px;
+    }
+    
+    .banner-content h3 {
+        font-size: 18px;
+    }
+    
+    .banner-content h1 {
+        font-size: 48px;
+        line-height: 1.15;
+    }
+    
+    .banner-content p {
+        font-size: 17px;
+    }
+    
+    .banner-btn {
+        padding: 14px 33px;
+        font-size: 15px;
+    }
+    
+    .banner-features {
+        flex-direction: row;
+        gap: 15px;
+    }
+    
+    .feature-item {
+        margin-right: 15px;
+    }
+    
+    /* ========== OFFER CONTAINER ========== */
+    #banner-offer {
+        padding: 35px 25px;
+    }
+    
+    .offer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+    
+    /* ========== CATEGORIES SECTION ========== */
+    .categories-wrapper {
+        padding: 0 25px;
+        gap: 12px;
+    }
+    
+    .categories-list {
+        grid-template-columns: repeat(6, 1fr);
+        height: 128px;
+    }
+    
+    .mega-deals {
+        min-width: 200px;
+    }
+    
+    /* ========== BEST DEALS SECTION ========== */
+    .best-deals {
+        padding: 10px 25px;
+    }
+    
+    .best-deals .deals-title {
+        font-size: 26px;
+    }
+    
+    .best-deals .deals-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+    
+    /* ========== BEST SELLERS SECTION ========== */
+    .best-sellers {
+        padding: 30px 25px;
+    }
+    
+    .best-sellers .sellers-title {
+        font-size: 26px;
+    }
+    
+    .best-sellers .sellers-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    
+    /* ========== MEGA OFFER ========== */
+    .mega-offer-banner {
+        height: 220px;
+    }
+    
+    .mega-offer-content {
+        width: 450px;
+    }
+    
+    .mega-offer-content h1 {
+        font-size: 48px;
+    }
+    
+    /* ========== SERVICE NEWSLETTER ========== */
+    .service-newsletter {
+        padding: 10px 25px;
+    }
+    
+    .service-newsletter .service-features {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 15px 0;
+    }
+    
+    .service-newsletter .service-item {
+        padding: 8px 20px;
+    }
+    
+    .service-newsletter .newsletter {
+        flex-direction: row;
+        align-items: center;
+        padding: 20px 30px;
+        margin-top: 30px;
+    }
+    
+    .service-newsletter .newsletter-form {
+        width: 350px;
+    }
+    
+    /* ========== FOOTER ========== */
+    .nexora-footer .footer-content {
+        grid-template-columns: 1.2fr 1fr 1fr 1fr 1.1fr;
+        column-gap: 35px;
+        padding: 25px 50px 20px;
+    }
+    
+    .nexora-footer .footer-logo-text img {
+        width: 180px;
+    }
+    
+    .nexora-footer .footer-bottom {
+        flex-direction: row;
+        padding: 20px 50px;
+    }
+}
+
+/* ==================== LARGE DEVICES (1024px - 1440px) ===================== */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    
+    /* ========== HEADER RESPONSIVE ========== */
+    .header-top-content {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    
+    .search-box {
+        width: 420px;
+    }
+    
+    /* ========== NAVBAR RESPONSIVE ========== */
+    .navbar {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    
+    .nav-links ul {
+        gap: 25px;
+    }
+    
+    /* ========== BANNER ========== */
+    .banner-content {
+        padding-left: 60px;
+    }
+    
+    /* ========== OFFER CONTAINER ========== */
+    #banner-offer {
+        padding: 40px 25px;
+    }
+    
+    .offer-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* ========== CATEGORIES SECTION ========== */
+    .categories-wrapper {
+        padding: 0 25px;
+    }
+    
+    /* ========== BEST DEALS SECTION ========== */
+    .best-deals {
+        padding: 10px 25px;
+    }
+    
+    .best-deals .deals-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    /* ========== BEST SELLERS SECTION ========== */
+    .best-sellers {
+        padding: 30px 25px;
+    }
+    
+    .best-sellers .sellers-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    /* ========== SERVICE FEATURES ========== */
+    .service-newsletter {
+        padding: 10px 25px;
+    }
+    
+    .service-newsletter .newsletter-form {
+        width: 380px;
+    }
+    
+    /* ========== FOOTER ========== */
+    .nexora-footer .footer-content {
+        column-gap: 40px;
+        padding: 25px 50px 20px;
+    }
+}
+
+/* ==================== EXTRA LARGE DEVICES (>= 1440px) ===================== */
+@media screen and (min-width: 1440px) {
+    
+    /* ========== HEADER RESPONSIVE ========== */
+    .header-top-content {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .search-box {
+        width: 450px;
+    }
+    
+    /* ========== NAVBAR RESPONSIVE ========== */
+    .navbar {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    /* ========== BANNER ========== */
+    .banner-slider {
+        height: 700px;
+    }
+    
+    .banner-content {
+        padding-top: 200px;
+        padding-left: 80px;
+    }
+    
+    .banner-content h1 {
+        font-size: 64px;
+    }
+    
+    /* ========== OFFER CONTAINER ========== */
+    #banner-offer {
+        padding: 40px 30px;
+    }
+    
+    /* ========== CATEGORIES SECTION ========== */
+    .categories-wrapper {
+        padding: 0 30px;
+    }
+    
+    /* ========== BEST DEALS SECTION ========== */
+    .best-deals {
+        padding: 10px 30px;
+    }
+    
+    .best-deals .deals-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    /* ========== BEST SELLERS SECTION ========== */
+    .best-sellers {
+        padding: 30px 30px;
+    }
+    
+    .best-sellers .sellers-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    /* ========== SERVICE NEWSLETTER ========== */
+    .service-newsletter {
+        padding: 10px 30px;
+    }
+    
+    .service-newsletter .newsletter-form {
+        width: 400px;
+    }
+    
+    /* ========== FOOTER ========== */
+    .nexora-footer .footer-content {
+        column-gap: 45px;
+        padding: 25px 64px 20px;
+    }
+    
+    .nexora-footer .footer-bottom {
+        padding: 20px 64px;
+    }
+}
+
+/* ==================== ULTRA-WIDE SCREENS (>= 1920px) ===================== */
+@media screen and (min-width: 1920px) {
+    
+    /* ========== MAX WIDTH CONTAINER ========== */
+    body {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+    
+    #header-container {
+        max-width: 1920px;
+    }
+    
+    main {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+    
+    .nexora-footer {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ==================== LANDSCAPE MODE ADJUSTMENTS ===================== */
+@media (orientation: landscape) and (max-height: 600px) {
+    
+    /* ========== BANNER ADJUSTMENTS ========== */
+    .banner-slider {
+        height: 400px;
+    }
+    
+    .banner-content {
+        padding-top: 80px;
+    }
+    
+    .banner-content h1 {
+        font-size: 36px;
+    }
+    
+    .banner-features {
+        display: none;
+    }
+    
+    .slider-dots {
+        bottom: 15px;
+    }
+}
+
+/* ==================== PRINT STYLES ===================== */
+@media print {
+    
+    #header-container {
+        position: static;
+        border-bottom: none;
+    }
+    
+    .navbar {
+        display: none;
+    }
+    
+    .banner-slider {
+        display: none;
+    }
+    
+    .slider-btn,
+    .slider-dots {
+        display: none;
+    }
+    
+    .service-newsletter .newsletter {
+        display: none;
+    }
+    
+    .nexora-footer {
+        background: #fff;
+        color: #000;
+    }
+    
+    .nexora-footer .footer-links a {
+        color: #000;
+        text-decoration: underline;
+    }
+}
+
+/* ==================== ACCESSIBILITY & HIGH CONTRAST MODE ===================== */
+@media (prefers-contrast: more) {
+    
+    #header-container {
+        border: 2px solid #000;
+    }
+    
+    .nav-links a.active {
+        font-weight: 900;
+        text-decoration: underline;
+    }
+    
+    .banner-btn {
+        border: 2px solid #000;
+    }
+    
+    .best-deals .deal-card {
+        border: 2px solid #000;
+    }
+}
+
+/* ==================== REDUCED MOTION ===================== */
+@media (prefers-reduced-motion: reduce) {
+    
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .banner-slide {
+        transition: none;
+    }
+    
+    .banner-btn::before {
+        transition: none;
+    }
+    
+    .nav-links a:hover::after {
+        transition: none;
+    }
+}
+
+/* ==================== DARK MODE SUPPORT ===================== */
+@media (prefers-color-scheme: dark) {
+    
+    body {
+        background-color: #1a1a1a;
+    }
+    
+    .categories-section {
+        background: #1a1a1a;
+    }
+    
+    .best-deals .deal-card {
+        background: #2a2a2a;
+        border-color: #444;
+    }
+    
+    .best-sellers .seller-card {
+        background: #2a2a2a;
+        border-color: #444;
+    }
+    
+    .category-item {
+        background: #2a2a2a;
+    }
+}
+
+/* ==================== TABLET SPECIFIC ADJUSTMENTS ===================== */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    
+    .offer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .best-deals .deals-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .best-sellers .sellers-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    .offer-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .best-deals .deals-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    .best-sellers .sellers-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+/* ==================== CUSTOM SCROLLBAR ===================== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #011F7F;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #062B91;
+}
+
+/* ==================== FOCUS STYLES FOR ACCESSIBILITY ===================== */
+a:focus,
+button:focus,
+input:focus {
+    outline: 2px solid #FFC800;
+    outline-offset: 2px;
+}
+
+/* ==================== SMOOTH SCROLLING ===================== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==================== FIXES FOR COMMON RESPONSIVE ISSUES ===================== */
+
+/* Prevent horizontal scroll on mobile */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Fix for absolute positioned elements on mobile */
+@media (max-width: 768px) {
+    
+    body {
+        margin-top: 0;
+    }
+    
+    main {
+        margin-top: 100px;
+    }
+}
+
+/* Hamburger menu toggle (requires JavaScript) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #011F7F;
+        border-bottom: 1px solid #062B91;
+    }
+}
+
+/* Touch-friendly button sizes */
+@media (hover: none) and (pointer: coarse) {
+    
+    button,
+    a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .banner-btn {
+        padding: 16px 40px;
+    }
+}
