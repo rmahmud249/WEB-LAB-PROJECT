@@ -1257,9 +1257,9 @@
 }
 
 /* ==================== FOCUS STYLES FOR ACCESSIBILITY ===================== */
-a:focus,
-button:focus,
-input:focus {
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
     outline: 2px solid #FFC800;
     outline-offset: 2px;
 }
