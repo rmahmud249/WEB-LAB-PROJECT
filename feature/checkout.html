@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>checkout</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Existing CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- Product Details CSS -->
+    <link rel="stylesheet" href="../css/product-details.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+                    HEADER START
+========================================================= -->
+
+<header id="header-container">
+
+    <div class="header-top-content">
+
+        <div class="logo">
+            <a href="#">
+                <img src="../images/logo/logo.png" alt="NexoraBD Logo">
+            </a>
+        </div>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                class="search-input"
+                placeholder="Search for products..."
+            >
+
+            <div class="category">
+                <span>All Categories</span>
+                <i class="ri-arrow-down-s-line"></i>
+            </div>
+
+            <button class="search-btn">
+                <i class="ri-search-line"></i>
+            </button>
+
+        </div>
+
+        <div class="right-contnet">
+
+            <div class="r-item">
+
+                <div class="r-icon">
+                    <i class="ri-user-line"></i>
+                </div>
+
+                <div class="r-content">
+                    <a href="#">Sign In</a>
+                    <p>
+                        My Account
+                        <i class="ri-arrow-down-s-line"></i>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="r-item">
+
+                <div class="r-icon">
+                    <i class="ri-heart-line"></i>
+                </div>
+
+                <div class="r-content">
+                    <p>Wishlist</p>
+                    <p class="header-count wishlist-count">0</p>
+                </div>
+
+            </div>
+
+            <div class="r-item">
+
+                <button
+                    class="r-icon cart-header-toggle"
+                    type="button"
+                    aria-label="Open shopping cart"
+                >
+                    <i class="ri-shopping-cart-line"></i>
+                </button>
+
+                <div class="r-content cart-header-content">
+                    <a href="#">Cart</a>
+                    <p class="header-count cart-count">0</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="categories">
+            <i class="ri-menu-line"></i>
+            <span>All Categories</span>
+        </div>
+
+        <div class="nav-links">
+
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Best Sellers</a></li>
+                <li><a href="#">Brands</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+        </div>
+
+        <div class="support">
+            <i class="ri-customer-service-2-line"></i>
+            <span>Support: +880 1731 732 650</span>
+        </div>
+
+    </nav>
+
+</header>
+
+<!-- =========================================================
+                    HEADER END
+========================================================= -->
+<!-- =========================================================
+                    CHECKOUT MAIN
+========================================================= -->
+
+<main>
+
+<section class="checkout-section">
+
+    <div class="checkout-container">
+
+        <!-- ================= BREADCRUMB ================= -->
+
+        <div class="checkout-breadcrumb">
+
+            <a href="#">
+                <i class="ri-home-4-line"></i>
+                Home
+            </a>
+
+            <i class="ri-arrow-right-s-line"></i>
+
+            <span>Checkout</span>
+
+        </div>
+
+
+        <!-- ================= PAGE HEADER ================= -->
+
+        <div class="checkout-header">
+
+            <div class="checkout-title">
+
+                <h1>Checkout</h1>
+
+                <p>
+                    Complete your order with secure and easy steps.
+                </p>
+
+            </div>
+
+
+            <!-- Checkout Progress -->
+
+            <div class="checkout-progress">
+
+                <div class="progress-step active">
+
+                    <div class="progress-number">
+                        1
+                    </div>
+
+                    <span>Shipping Info</span>
+
+                </div>
+
+
+                <div class="progress-line active"></div>
+
+
+                <div class="progress-step">
+
+                    <div class="progress-number">
+                        2
+                    </div>
+
+                    <span>Payment Method</span>
+
+                </div>
+
+
+                <div class="progress-line"></div>
+
+
+                <div class="progress-step">
+
+                    <div class="progress-number">
+                        3
+                    </div>
+
+                    <span>Place Order</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= CHECKOUT GRID ================= -->
+
+        <div class="checkout-grid">
+
+
+            <!-- =================================================
+                        LEFT SIDE
+            ================================================== -->
+
+            <div class="checkout-left">
+
+
+                <!-- ================= SHIPPING ADDRESS ================= -->
+
+                <div class="checkout-card">
+
+                    <div class="checkout-card-title">
+
+                        <div class="step-circle">
+                            1
+                        </div>
+
+                        <div>
+                            <h2>Shipping Address</h2>
+
+                            <p>
+                                Enter your shipping details
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="shipping-form">
+
+
+                        <!-- Full Name -->
+
+                        <div class="form-group">
+
+                            <label>
+                                Full Name <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                value="Rasel Mahmud"
+                                placeholder="Enter your full name"
+                            >
+
+                        </div>
+
+
+                        <!-- Phone -->
+
+                        <div class="form-group">
+
+                            <label>
+                                Phone Number <span>*</span>
+                            </label>
+
+                            <input
+                                type="tel"
+                                value="+880 1737 732650"
+                                placeholder="Enter phone number"
+                            >
+
+                        </div>
+
+
+                        <!-- Address -->
+
+                        <div class="form-group full-width">
+
+                            <label>
+                                Address <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                value="House# 12, Road # 5, Dhanmondi, Dhaka"
+                                placeholder="Enter your address"
+                            >
+
+                        </div>
+
+
+                        <!-- City -->
+
+                        <div class="form-group">
+
+                            <label>
+                                City <span>*</span>
+                            </label>
+
+                            <div class="select-wrapper">
+
+                                <select>
+
+                                    <option>Dhaka</option>
+                                    <option>Chattogram</option>
+                                    <option>Sylhet</option>
+                                    <option>Rajshahi</option>
+                                    <option>Khulna</option>
+
+                                </select>
+
+                                <i class="ri-arrow-down-s-line"></i>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Postal Code -->
+
+                        <div class="form-group">
+
+                            <label>
+                                Postal Code <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                value="1205"
+                                placeholder="Postal code"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                            SHIPPING METHOD
+                ================================================== -->
+
+                <div class="checkout-card">
+
+                    <div class="checkout-card-title">
+
+                        <div class="step-circle">
+                            2
+                        </div>
+
+                        <div>
+
+                            <h2>Shipping Method</h2>
+
+                            <p>
+                                Choose your preferred shipping option
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shipping-methods">
+
+
+                        <!-- Standard Delivery -->
+
+                        <label class="shipping-option selected">
+
+                            <input
+                                type="radio"
+                                name="shipping"
+                                checked
+                            >
+
+                            <div class="shipping-icon">
+                                <i class="ri-truck-line"></i>
+                            </div>
+
+                            <div class="shipping-info">
+
+                                <strong>
+                                    Standard Delivery
+                                </strong>
+
+                                <span>
+                                    3–5 business days
+                                </span>
+
+                                <b>
+                                    ৳ 80
+                                </b>
+
+                                <small>
+                                    Recommended
+                                </small>
+
+                            </div>
+
+                            <i class="ri-checkbox-circle-fill radio-icon"></i>
+
+                        </label>
+
+
+                        <!-- Express Delivery -->
+
+                        <label class="shipping-option">
+
+                            <input
+                                type="radio"
+                                name="shipping"
+                            >
+
+                            <div class="shipping-icon">
+                                <i class="ri-flashlight-fill"></i>
+                            </div>
+
+                            <div class="shipping-info">
+
+                                <strong>
+                                    Express Delivery
+                                </strong>
+
+                                <span>
+                                    1–2 business days
+                                </span>
+
+                                <b>
+                                    ৳ 150
+                                </b>
+
+                            </div>
+
+                            <i class="ri-radio-button-line radio-icon"></i>
+
+                        </label>
+
+
+                        <!-- Cash Delivery -->
+
+                        <label class="shipping-option">
+
+                            <input
+                                type="radio"
+                                name="shipping"
+                            >
+
+                            <div class="shipping-icon">
+                                <i class="ri-hand-coin-line"></i>
+                            </div>
+
+                            <div class="shipping-info">
+
+                                <strong>
+                                    Cash on Delivery
+                                </strong>
+
+                                <span>
+                                    Pay at your door
+                                </span>
+
+                                <b>
+                                    ৳ 0
+                                </b>
+
+                            </div>
+
+                            <i class="ri-radio-button-line radio-icon"></i>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                            PAYMENT METHOD
+                ================================================== -->
+
+                <div class="checkout-card payment-card">
+
+                    <div class="checkout-card-title">
+
+                        <div class="step-circle">
+                            3
+                        </div>
+
+                        <div>
+
+                            <h2>Payment Method</h2>
+
+                            <p>
+                                Select a payment method
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="payment-options">
+
+
+                        <!-- Cash -->
+
+                        <label class="payment-option selected">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                checked
+                            >
+
+                            <div class="payment-logo cash-logo">
+                                <i class="ri-money-dollar-circle-line"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>Cash on Delivery</strong>
+
+                                <span>Pay at your door</span>
+
+                            </div>
+
+                            <i class="ri-checkbox-circle-fill payment-radio"></i>
+
+                        </label>
+
+
+                        <!-- bKash -->
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                            >
+
+                            <div class="payment-logo bkash-logo">
+                                <i class="ri-bank-card-line"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>bKash</strong>
+
+                                <span>Pay with bKash</span>
+
+                            </div>
+
+                            <i class="ri-radio-button-line payment-radio"></i>
+
+                        </label>
+
+
+                        <!-- Nagad -->
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                            >
+
+                            <div class="payment-logo nagad-logo">
+                                <i class="ri-wallet-3-line"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>Nagad</strong>
+
+                                <span>Pay with Nagad</span>
+
+                            </div>
+
+                            <i class="ri-radio-button-line payment-radio"></i>
+
+                        </label>
+
+
+                        <!-- Upay -->
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                            >
+
+                            <div class="payment-logo upay-logo">
+                                <i class="ri-wallet-line"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>Upay</strong>
+
+                                <span>Pay with Upay</span>
+
+                            </div>
+
+                            <i class="ri-radio-button-line payment-radio"></i>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Place Order -->
+
+                    <button class="place-order-btn">
+
+                        <i class="ri-lock-line"></i>
+
+                        <span>Place Order</span>
+
+                        <i class="ri-arrow-right-line"></i>
+
+                    </button>
+
+
+                    <div class="checkout-security">
+
+                        <i class="ri-shield-check-fill"></i>
+
+                        Your information is secure and encrypted.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                        RIGHT SIDE - ORDER SUMMARY
+            ================================================== -->
+
+            <aside class="order-summary">
+
+                <div class="summary-header">
+
+                    <h2>
+                        Order Summary
+                    </h2>
+
+                    <span>
+                        3 Items
+                    </span>
+
+                </div>
+
+
+                <!-- ================= PRODUCT 1 ================= -->
+
+                <div class="summary-product">
+
+                    <div class="summary-image">
+
+                        <img
+                            src="../images/best-deal/wireless_earbuds.png"
+                            alt="Wireless Earbuds Pro"
+                        >
+
+                    </div>
+
+                    <div class="summary-product-info">
+
+                        <h3>
+                            Wireless Earbuds Pro
+                        </h3>
+
+                        <strong>
+                            ৳1,890
+                        </strong>
+
+
+                        <div class="summary-bottom">
+
+                            <div class="summary-quantity">
+
+                                <button>
+                                    <i class="ri-subtract-line"></i>
+                                </button>
+
+                                <span>1</span>
+
+                                <button>
+                                    <i class="ri-add-line"></i>
+                                </button>
+
+                            </div>
+
+                            <span class="summary-old-price">
+                                ৳2,700
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <button class="remove-product">
+                        <i class="ri-close-line"></i>
+                    </button>
+
+                    <b class="item-total">
+                        ৳1,890
+                    </b>
+
+                </div>
+
+
+                <!-- ================= PRODUCT 2 ================= -->
+
+                <div class="summary-product">
+
+                    <div class="summary-image">
+
+                        <img
+                            src="../images/best-deal/luggage.png"
+                            alt="Carry-On Luggage Bag"
+                        >
+
+                    </div>
+
+                    <div class="summary-product-info">
+
+                        <h3>
+                            Carry-On Luggage Bag
+                        </h3>
+
+                        <strong>
+                            ৳3,990
+                        </strong>
+
+
+                        <div class="summary-bottom">
+
+                            <div class="summary-quantity">
+
+                                <button>
+                                    <i class="ri-subtract-line"></i>
+                                </button>
+
+                                <span>1</span>
+
+                                <button>
+                                    <i class="ri-add-line"></i>
+                                </button>
+
+                            </div>
+
+                            <span class="summary-old-price">
+                                ৳6,690
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <button class="remove-product">
+                        <i class="ri-close-line"></i>
+                    </button>
+
+                    <b class="item-total">
+                        ৳3,990
+                    </b>
+
+                </div>
+
+
+                <!-- ================= PRODUCT 3 ================= -->
+
+                <div class="summary-product">
+
+                    <div class="summary-image">
+
+                        <img
+                            src="../images/best-deal/dslr_camera.png"
+                            alt="DSLR Camera 24.2MP"
+                        >
+
+                    </div>
+
+                    <div class="summary-product-info">
+
+                        <h3>
+                            DSLR Camera 24.2MP
+                        </h3>
+
+                        <strong>
+                            ৳28,990
+                        </strong>
+
+
+                        <div class="summary-bottom">
+
+                            <div class="summary-quantity">
+
+                                <button>
+                                    <i class="ri-subtract-line"></i>
+                                </button>
+
+                                <span>1</span>
+
+                                <button>
+                                    <i class="ri-add-line"></i>
+                                </button>
+
+                            </div>
+
+                            <span class="summary-old-price">
+                                ৳33,990
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <button class="remove-product">
+                        <i class="ri-close-line"></i>
+                    </button>
+
+                    <b class="item-total">
+                        ৳28,990
+                    </b>
+
+                </div>
+
+
+                <!-- ================= SUMMARY TOTAL ================= -->
+
+                <div class="summary-totals">
+
+                    <div>
+                        <span>Subtotal (3 items)</span>
+                        <strong>৳34,870</strong>
+                    </div>
+
+                    <div>
+                        <span>Shipping Cost</span>
+                        <strong>৳80</strong>
+                    </div>
+
+                    <div class="discount-row">
+                        <span>Discount</span>
+                        <strong>-৳2,000</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- Total -->
+
+                <div class="summary-total">
+
+                    <span>Total</span>
+
+                    <strong>
+                        ৳32,950
+                    </strong>
+
+                </div>
+
+
+                <!-- Saved -->
+
+                <div class="saved-message">
+
+                    <i class="ri-price-tag-3-fill"></i>
+
+                    You saved ৳2,000 on this order!
+
+                </div>
+
+
+                <!-- ================= TRUST FEATURES ================= -->
+
+                <div class="summary-services">
+
+                    <div>
+
+                        <i class="ri-shield-check-fill"></i>
+
+                        <span>
+                            <strong>Secure Payment</strong>
+                            100% secure
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="ri-truck-fill"></i>
+
+                        <span>
+                            <strong>Fast Delivery</strong>
+                            3–5 days
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="ri-headphone-line"></i>
+
+                        <span>
+                            <strong>24/7 Support</strong>
+                            We're here to help
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+                    MAIN END
+========================================================= -->
+
+
+<!-- =========================================================
+                    FOOTER START
+========================================================= -->
+
+<footer class="nexora-footer">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+
+                <div class="footer-logo-text">
+
+                    <img
+                        src="../images/logo/logo.png"
+                        alt="Logo"
+                    >
+
+                </div>
+
+            </div>
+
+            <p class="footer-description">
+
+                Your one-stop destination for premium products
+                at the best prices. Shop smart, shop with confidence.
+
+            </p>
+
+            <div class="footer-social">
+
+                <a href="#">
+                    <i class="ri-facebook-fill"></i>
+                </a>
+
+                <a href="#">
+                    <i class="ri-twitter-x-fill"></i>
+                </a>
+
+                <a href="#">
+                    <i class="ri-instagram-line"></i>
+                </a>
+
+                <a href="#">
+                    <i class="ri-youtube-fill"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Shop</h3>
+
+            <div class="footer-links">
+
+                <a href="#">All Categories</a>
+                <a href="#">Best Sellers</a>
+                <a href="#">New Arrivals</a>
+                <a href="#">Deals</a>
+                <a href="#">Brands</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Services</h3>
+
+            <div class="footer-links">
+
+                <a href="#">Contact Us</a>
+                <a href="#">Track Order</a>
+                <a href="#">Returns &amp; Refunds</a>
+                <a href="#">Shipping Policy</a>
+                <a href="#">FAQs</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>My Account</h3>
+
+            <div class="footer-links">
+
+                <a href="#">My Account</a>
+                <a href="#">Order History</a>
+                <a href="#">Wishlist</a>
+                <a href="#">Newsletter</a>
+                <a href="#">Logout</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column footer-contact">
+
+            <h3>Contact Us</h3>
+
+            <div class="contact-list">
+
+                <div class="contact-item">
+                    <i class="ri-phone-line"></i>
+                    <span>+880 1731 732 650</span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="ri-mail-line"></i>
+                    <span>support@nexorabd.com</span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="ri-map-pin-line"></i>
+                    <span>Dhaka, Bangladesh</span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="ri-time-line"></i>
+                    <span>Mon - Fri: 9AM - 6PM</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p class="copyright">
+            © 2026 NEXORABD. All Rights by Rasel Mahmud.
+        </p>
+
+        <div class="payment-methods">
+
+            <div class="payment visa">
+                VISA
+            </div>
+
+            <div class="payment mastercard">
+                <i class="ri-mastercard-fill"></i>
+            </div>
+
+            <div class="payment nagad">
+                nagad
+            </div>
+
+            <div class="payment upay">
+                Upay
+            </div>
+
+            <div class="payment bkash">
+                bKash
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+</body>
+</html>

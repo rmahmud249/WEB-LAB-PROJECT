@@ -136,6 +136,7 @@ const cartTotal = document.querySelector(".cart-total");
 const wishlistCount = document.querySelector(".wishlist-count");
 const cart = new Map();
 const dealCards = document.querySelectorAll(".deal-card");
+const productCards = document.querySelectorAll(".deal-card, .seller-card");
 let wishlistTotal = 0;
 const cartStorageKey = "nexoraCart";
 const savedCart = JSON.parse(localStorage.getItem(cartStorageKey) || "[]");
@@ -147,6 +148,34 @@ if (Array.isArray(savedCart)) {
         }
     });
 }
+
+productCards.forEach(function(card) {
+    card.addEventListener("click", function(event) {
+        if (event.target.closest("button, a")) {
+            return;
+        }
+
+        const image = card.querySelector("img");
+        const name = card.querySelector(".product-name, .seller-name");
+        const price = card.querySelector(".price, .seller-price");
+        const oldPrice = card.querySelector(".old-price");
+        const discount = card.querySelector(".discount");
+        const reviews = card.querySelector(".reviews, .seller-reviews");
+        const product = {
+            name: name ? name.textContent.trim() : "Product",
+            image: image ? image.getAttribute("src") : "",
+            price: price ? price.textContent.trim() : "Price unavailable",
+            oldPrice: oldPrice ? oldPrice.textContent.trim() : "",
+            discount: discount ? discount.textContent.trim() : "",
+            reviews: reviews ? reviews.textContent.trim() : "(0 reviews)",
+            category: card.classList.contains("seller-card") ? "Best Sellers" : "Deals"
+        };
+
+        const detailsUrl = new URL("feature/product-details.html", window.location.href);
+        detailsUrl.searchParams.set("product", JSON.stringify(product));
+        window.location.href = detailsUrl.href;
+    });
+});
 
 dealCards.forEach(function(card) {
     const likeButton = document.createElement("button");
